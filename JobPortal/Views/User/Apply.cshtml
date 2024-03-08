@@ -1,0 +1,113 @@
+﻿@model JobPortal.Models.Apply
+
+@{
+    ViewBag.Title = "Apply";
+    Layout = "~/Views/Shared/UserLayout.cshtml";
+}
+<section class="banner banner-secondary" id="top" style="background-image: url(../img/1.jpg);">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="banner-caption">
+                    <div class="line-dec"></div>
+                    <h2>Apply for the job</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="img-apply">
+    <img src="~/img/signup.png" alt="jacket" width="750" height="650" />
+</div>
+<section class="featured-places">
+    <div class="container">
+        <div class="row">
+
+        </div>
+    </div>
+</section>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+
+<center>
+    
+    <div class="box-Register">
+        <div class="col-md-12">
+            <div class="section-heading">
+                <span>Apply for the job</span>
+            </div>
+            <div class="form-horizontal">
+
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    <div class="col-md-12">
+                        @Html.DropDownListFor(model => model.Jobtitle, new SelectList(new[] {
+                            new SelectListItem { Text = "Software Developer", Value = "Software Developer" },
+                            new SelectListItem { Text = "Test Engineer", Value = "Test Engineer" },
+                            new SelectListItem { Text = "AI/ML Engineer", Value = "AI/ML Engineer" },
+                            new SelectListItem { Text = "Appforms Developer", Value = "Appforms Developer" }
+                            }, "Value", "Text"), "-- Select Job Title --", new { @class = "forms-controls", placeholder = "Enter the jobtitle", @id = "fname", @onfocusout = " validateName() " })
+                        @Html.ValidationMessageFor(model => model.Jobtitle, "", new { @class = "text-danger" })
+                        <small id="fname-error"></small>
+                        </div>
+                    </div>
+
+                <div class="form-group">
+                    <div class="col-md-12">
+                        @Html.EditorFor(model => model.Fullname, new { htmlAttributes = new { @class = "form-controls", placeholder = "Enter your full name", } })
+                        @Html.ValidationMessageFor(model => model.Fullname, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-12">
+                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-controls", placeholder = "Enter your Email Address", } })
+                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-12">
+                        @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-controls", placeholder = "Enter your Phone number", } })
+                        @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-12">
+                        @Html.EditorFor(model => model.Degree, new { htmlAttributes = new { @class = "form-controls", placeholder = "Enter your Degree", } })
+                        @Html.ValidationMessageFor(model => model.Degree, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-12">
+                        @Html.EditorFor(model => model.Skills, new { htmlAttributes = new { @class = "form-controls", placeholder = "Enter the Skills you know", } })
+                        @Html.ValidationMessageFor(model => model.Skills, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-12">
+                        @Html.EditorFor(model => model.Projects, new { htmlAttributes = new { @class = "form-controls", placeholder = "Enter any projects or certifications done by you", } })
+                        @Html.ValidationMessageFor(model => model.Projects, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Apply" class="s-button" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</center>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

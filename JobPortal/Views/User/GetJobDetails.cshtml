@@ -1,0 +1,84 @@
+﻿@model IEnumerable<JobPortal.Models.Job>
+
+@{
+    ViewBag.Title = "GetJobDetails";
+    Layout = "~/Views/Shared/UserLayout.cshtml";
+}
+
+<section class="banner banner-secondary" id="top" style="background-image: url(../img/1.jpg);">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="banner-caption">
+                    <div class="line-dec"></div>
+                    <h2>Available Jobs</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<center>
+    <div class="box-Details">
+        <div class="section-heading">
+            <span>Available jobs</span>
+        </div>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.C_Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.J_Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.J_Field)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Vacancy)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.J_Description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Salary)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Locaion)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.C_Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.J_Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.J_Field)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Vacancy)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.J_Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Salary)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Locaion)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Apply", "Apply", new { id = item.Id })
+
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</center>

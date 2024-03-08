@@ -1,0 +1,88 @@
+﻿@model IEnumerable<JobPortal.Models.Registration>
+
+@{
+    ViewBag.Title = "GetUserDetails";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<center>
+    <div class="box-Details">
+        <div class="section-heading">
+            <span>User details</span>
+        </div>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Firstname)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Lastname)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Dateofbirth)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Gender)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Phonenumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.State)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.City)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Firstname)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Lastname)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Dateofbirth)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Gender)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Phonenumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.State)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.City)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "EditUserDetails", new { id = item.Id }) |
+
+                        @Html.ActionLink("Delete", "DeleteUser", new { id = item.Id })
+                    </td>
+                </tr>
+
+            }
+
+        </table>
+    </div>
+</center>
+<script src="~/js/vendor/bootstrap.js"></script>
+<script src="~/js/vendor/bootstrap.min.js"></script>
+<script src="~/js/vendor/jquery-1.11.2.min.js"></script>
+<script src="~/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+<script src="~/js/vendor/npm.js"></script>
+<script src="~/js/datepicker.js"></script>
+<script src="~/js/main.js"></script>
+<script src="~/js/plugins.js"></script>

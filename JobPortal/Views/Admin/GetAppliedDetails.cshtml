@@ -1,0 +1,73 @@
+﻿@model IEnumerable<JobPortal.Models.Apply>
+
+@{
+    ViewBag.Title = "GetAppliedDetails";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+<center>
+    <div class="box-Details">
+        <div class="section-heading">
+            <span>Applied candidates</span>
+        </div>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Jobtitle)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Fullname)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Phone)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Degree)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Skills)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Projects)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Jobtitle)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Fullname)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Phone)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Degree)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Skills)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Projects)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "EditApply", new { id = item.Id }) |
+                        @Html.ActionLink("Delete", "DeleteApply", new { id = item.Id })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</center>

@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="~/css/fontAwesome.css" rel="stylesheet" />
+    <link href="~/css/hero-slider.css" rel="stylesheet" />
+    <link href="~/css/owl-carousel.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+    <link href="~/css/StyleSheet1.css" rel="stylesheet" />
+    <link href="~/css/linearicons.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <script src="~/Content/index.js"></script>
+    <script src="~/js/vendor/bootstrap.js"></script>
+    <script src="~/js/vendor/bootstrap.min.js"></script>
+    <script src="~/js/vendor/jquery-1.11.2.min.js"></script>
+    <script src="~/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="~/js/vendor/npm.js"></script>
+    <script src="~/js/datepicker.js"></script>
+    <script src="~/js/main.js"></script>
+    <script src="~/js/plugins.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div>
+        <div class="wrap">
+            <header id="header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button id="primary-nav-button" type="button">Menu</button>
+                            <a href="index.html">
+                                <div class="logo">
+                                    <img src="~/img/logo.png" alt="Venue Logo">
+                                </div>
+                            </a>
+                            <nav id="primary-nav" class="dropdown cf">
+                                <ul class="dropdown menu">
+                                    <li>@Html.ActionLink("Registered users", "GetUserDetails", "Registration")</li>
+                                    <li>@Html.ActionLink("Add jobs", "AddJob", "Admin")</li>
+                                    <li>@Html.ActionLink("Manage jobs", "GetJobDetails", "Admin")</li>
+                                    <li>@Html.ActionLink("Applied candidates", "GetAppliedDetails", "Admin")</li>
+                                    <li>@Html.ActionLink("Queries", "GetContact", "Admin")</li>
+                                </ul>
+                            </nav><!-- / #primary-nav -->
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+        @RenderBody()
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="about-veno">
+                            <div class="logo">
+                                <img src="~/img/logo.png" alt="Venue Logo">
+                            </div>
+                            <p>JobAgency is the upcoming job site in the Inida with over 1000+ unique visitors every month. JobAgency strives to put job seekers first, giving them free access to search for jobs, post resumes, and research companies. Every day, we connect hundereds of people to new opportunities.</p>
+                            <ul class="social-icons">
+                                <li>
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="useful-links">
+                            <div class="footer-heading">
+                                <h4>Useful Links</h4>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul>
+                                        <li>@Html.ActionLink("Home", "Index", "Home", new { @class = "nav-link" })</li>
+                                        <li>@Html.ActionLink("About Us", "About", "Home", new { @class = "nav-link" })</li>
+                                        <li>@Html.ActionLink("Contact Us", "Contact", "Home", new { @class = "nav-link" })</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul>
+                                        <li>@Html.ActionLink("Sign in", "Signin", "Signin", new { @class = "nav-link" })</li>
+                                        <li>@Html.ActionLink("Sign up", "AddDetail", "Register", new { @class = "nav-link" })</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="contact-info">
+                            <div class="footer-heading">
+                                <h4>Contact Information</h4>
+                            </div>
+                            <p><i class="fa fa-map-marker"></i> Udumalpet,TamilNadu.</p>
+                            <ul>
+                                <li><span>Phone:</span><a href="#">+91 9080328583</a></li>
+                                <li><span>Email:</span><a href="#">jobfinderudt@gmail.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="sub-footer">
+            <p>Copyright © 2020 JobAgency - Designed by: <a href="">Kannan K</a></p>
+        </div>
+
+
+        <div>
+        </div>
+
+        <script src="~/js/vendor/bootstrap.js"></script>
+        <script src="~/js/vendor/bootstrap.min.js"></script>
+        <script src="~/js/vendor/jquery-1.11.2.min.js"></script>
+        <script src="~/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="~/js/vendor/npm.js"></script>
+        <script src="~/js/datepicker.js"></script>
+        <script src="~/js/main.js"></script>
+        <script src="~/js/plugins.js"></script>
+
+    </div>
+</body>
+</html>
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+@RenderSection("scripts", required: false)

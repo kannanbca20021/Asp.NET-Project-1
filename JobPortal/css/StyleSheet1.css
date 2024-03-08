@@ -1,0 +1,268 @@
+﻿.box-Register {
+    border-radius: 10px;
+    background: #fff;
+    padding-left: 150px;
+    margin-bottom:100px;
+    margin-top:-5350px;
+    width: 700px;
+    height: 1000px;
+}
+
+.box-Addjob {
+    border-radius: 10px;
+    background: #fff;
+    padding-left: 150px;
+    margin-bottom: 100px;
+    margin-top: -5350px;
+    width: 700px;
+    height: 1000px;
+}
+
+
+.box-Details {
+    border-radius: 10px;
+    background: #fff;
+    padding-left: 10px;
+    width: 1200px;
+    height: 1000px;
+}
+.signin {
+    border-radius: 10px;
+    background: #fff;
+    padding-left: 100px;
+    width: 700px;
+    height: 500px;
+}
+
+.s-button {
+    display: inline-block;
+    position:relative;
+    background-color: #a254fa;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-right:95px;
+    margin-top:20px;
+    margin-bottom:20px;
+    padding: 10px 60px ;
+    text-decoration: none;
+    border: 2px solid #a254fa;
+    transition: all 0.5s;
+}
+.s-button:hover {
+    background-color: transparent;
+    color: #580393;
+}
+.form-controls {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    padding: 16px;
+    outline: 0;
+    font-family: inherit;
+    font-size: 18px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+    .form-controls:hover {
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        border-width: 4px;
+        border-style: solid;
+        border-color: #a254fa;
+        padding: 16px;
+        outline: 0;
+        font-family: inherit;
+        font-size: 18px;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+        transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    }
+.contact {
+    box-sizing: border-box;
+    position:absolute;
+    display: block;
+    width: 50%;
+    left:200px;
+    top:-55px;
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    padding: 16px;
+    outline: 0;
+    font-family: inherit;
+    font-size: 14px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+    .contact:hover {
+        box-sizing: border-box;
+        position: absolute;
+        display: block;
+        width: 50%;
+        left: 200px;
+        top: -55px;
+        border-radius: 10px;
+        border-width: 2px;
+        border-style: solid;
+        border-color: #a254fa;
+        padding: 16px;
+        outline: 0;
+        font-family: inherit;
+        font-size: 14px;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+        transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    }
+
+.contact-1 {
+    position:absolute;
+    box-sizing: border-box;
+    display: block;
+    width: 50%;
+    left:600px;
+    top: -71px;
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    padding: 16px;
+    outline: 0;
+    font-family: inherit;
+    font-size: 14px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+    .contact-1:hover {
+        position: absolute;
+        box-sizing: border-box;
+        display: block;
+        width: 50%;
+        left: 600px;
+        top: -71px;
+        border-radius: 10px;
+        border-width: 2px;
+        border-style: solid;
+        border-color: #a254fa;
+        padding: 16px;
+        outline: 0;
+        font-family: inherit;
+        font-size: 14px;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+        transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    }
+
+.contact-2 {
+    position:absolute;
+    box-sizing: border-box;
+    display: block;
+    width: 102%;
+    top: -20px;
+    left:200px;
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    padding: 16px;
+    outline: 0;
+    font-family: inherit;
+    font-size: 14px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+    .contact-2:hover {
+        position: absolute;
+        box-sizing: border-box;
+        display: block;
+        width: 102%;
+        top: -20px;
+        left: 200px;
+        border-radius: 10px;
+        border-width: 2px;
+        border-style: solid;
+        border-color: #a254fa;
+        padding: 16px;
+        outline: 0;
+        font-family: inherit;
+        font-size: 14px;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+        transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    }
+
+.c-button {
+    display: inline-block;
+    position: absolute;
+    background-color: #a254fa;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left:370px;
+    margin-right: 95px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    padding: 10px 60px;
+    text-decoration: none;
+    border: 2px solid #a254fa;
+    transition: all 0.5s;
+}
+.c-button:hover {
+    background-color: transparent;
+    color: #580393;
+}
+.description {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: 500px;
+    border-width: 1px;
+    border-style: solid;
+    padding: 16px;
+    outline: 0;
+    font-family: inherit;
+    font-size: 18px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.l-button {
+    display: inline-block;
+    position: relative;
+    background-color: #a254fa;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    left: 1050px;
+    top: 10px;
+    margin-right: 95px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px 16px;
+    text-decoration: none;
+    border: 2px solid #a254fa;
+    transition: all 0.5s;
+}
+.l-button:hover {
+    background-color: transparent;
+    color: #580393;
+}
+
+.help-text {
+    margin-top: 15px;
+}
+
+.help-text p {
+        text-align: center;
+        font-size: 15px;
+        color:#a254fa;
+
+    }
+
+.col-md-1{
+    font-size:20px;
+}
+small {
+    color: red;
+}

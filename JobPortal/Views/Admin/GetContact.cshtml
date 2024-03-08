@@ -1,0 +1,53 @@
+﻿@model IEnumerable<JobPortal.Models.Contact>
+
+@{
+    ViewBag.Title = "GetContact";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<center>
+    <div class="box-Details">
+        <div class="section-heading">
+            <span>Queries</span>
+        </div>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Message)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Status)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Message)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Status)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Update", "EditDetails", new { id = item.Id }) |
+                        @Html.ActionLink("Delete", "DeleteDetails", new { id = item.Id })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</center>

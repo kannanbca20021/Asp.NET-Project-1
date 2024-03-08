@@ -1,0 +1,277 @@
+﻿@model JobPortal.Models.Registration
+
+@{
+    ViewBag.Title = "Registration";
+    Layout = "~/Views/Shared/HomeLayout.cshtml";
+}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="~/css/fontAwesome.css" rel="stylesheet" />
+    <link href="~/css/hero-slider.css" rel="stylesheet" />
+    <link href="~/css/owl-carousel.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+    <link href="~/css/StyleSheet1.css" rel="stylesheet" />
+    <link href="~/css/linearicons.css" rel="stylesheet" />
+    <script src="~/js/vendor/bootstrap.js"></script>
+    <script src="~/js/vendor/bootstrap.min.js"></script>
+    <script src="~/js/vendor/jquery-1.11.2.min.js"></script>
+    <script src="~/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="~/js/vendor/npm.js"></script>
+    <script src="~/js/datepicker.js"></script>
+    <script src="~/js/main.js"></script>
+    <script src="~/js/plugins.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="banner banner-secondary" id="top" style="background-image: url(../img/1.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="banner-caption">
+                        <div class="line-dec"></div>
+                        <h2>Create account</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-places">
+        <div class="container">
+            <div class="row">
+
+            </div>
+        </div>
+    </section>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="img-signup">
+            <img src="~/img/signup.png" alt="jacket" width="600" height="500" />
+        </div>
+
+        <center>
+            <div class="box-Register">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <span>Create account</span>
+                    </div>
+                    <div class="form-horizontal">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group">
+
+                            <div class="col-md-12">
+                                @Html.EditorFor(model => model.Firstname, new { htmlAttributes = new { @class = "form-controls", placeholder = "First name", @id = "fname", @onfocusout = " validateName() " } })
+                                @Html.ValidationMessageFor(model => model.Firstname, "", new { @class = "text-danger" })
+                                <small id="fname-error"></small>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+
+                            <div class="col-md-12">
+                                @Html.EditorFor(model => model.Lastname, new { htmlAttributes = new { @class = "form-controls", placeholder = "Last name", @id = "lname", @onfocusout = "validateLastName()" } })
+                                @Html.ValidationMessageFor(model => model.Lastname, "", new { @class = "text-danger" })
+                                <small id="lname-error"></small>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+
+                            <div class="col-md-12">
+                                @Html.EditorFor(model => model.Dateofbirth, new { htmlAttributes = new { @class = "form-controls", placeholder = "Date of birth", @id = "dob", @onfocusout = "validateDateOfBirth()" } })
+                                @Html.ValidationMessageFor(model => model.Dateofbirth, "", new { @class = "text-danger" })
+                                <small id="dob-error"></small>
+
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <div class="col-md-12">
+                                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-controls", placeholder = "Email", @id = "email", @onfocusout = "validateEmail()" } })
+                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                                <small id="email-error"></small>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <div class="col-md-12">
+                                @Html.EditorFor(model => model.Phonenumber, new { htmlAttributes = new { @class = "form-controls", placeholder = "Mobile number", @id = "number", @onfocusout = "validateNumber()" } })
+                                @Html.ValidationMessageFor(model => model.Phonenumber, "", new { @class = "text-danger" })
+                                <small id="number-error"></small>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+
+                            <div class="col-md-12">
+                                @Html.DropDownListFor(model => model.State, new SelectList(new[] {
+                                 new SelectListItem { Text = "Tamil Nadu", Value = "Tamil Nadu" },
+                                 new SelectListItem { Text = "Kerala", Value = "Kerala" },
+                                 new SelectListItem { Text = "Andhra Pradesh", Value = "Andhra Pradesh" },
+                                 new SelectListItem { Text = "Karnataka", Value = "Karnataka" }
+                                 }, "Value", "Text"), "-- Select State --", new { @class = "form-controls", placeholder = "State", @id = "state", @onfocusout = "validateState()" })
+                                @Html.ValidationMessageFor(model => model.State, "", new { @class = "text-danger" })
+                                <small id="state-error"></small>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+
+                            <div class="col-md-12">
+                                @Html.EditorFor(model => model.City, new { htmlAttributes = new { @class = "form-controls", placeholder = "City", @id = "address", @onfocusout = "validateAddress()" } })
+                                @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
+                                <small id="address-error"></small>
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <div class="col-md-12">
+                                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-controls", placeholder = "Password", @id = "password", @onfocusout = "validatePassword()" } })
+                                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                                <small id="password-error"></small>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+
+                            <div class="col-md-12">
+                                @Html.EditorFor(model => model.Confirmpassword, new { htmlAttributes = new { @class = "form-controls", placeholder = "Confirm password", @id = "password2", @onfocusout = "validateConfirmPassword()" } })
+                                @Html.ValidationMessageFor(model => model.Confirmpassword, "", new { @class = "text-danger" })
+                                <small id="password2-error"></small>
+                            </div>
+                        </div>
+
+                        <div class="radio">
+
+                            <div class="col-md-1">
+                                @Html.RadioButtonFor(model => model.Gender, "Male")
+                                @Html.Label("Male")
+
+                                @Html.RadioButtonFor(model => model.Gender, "Female")
+                                @Html.Label("Female")
+                                @Html.ValidationMessageFor(model => model.Gender, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Create" class="s-button" id="submit1" onclick="registerHandler()" />
+                        </div>
+                    </div>
+                    <div class="help-text">
+                        <p><a href="@Url.Action("Signin", "Home")">Already have a account?</a></p>
+                    </div>
+                </div>
+            </div>
+        </center>
+
+
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="about-veno">
+                            <div class="logo">
+                                <img src="~/img/logo.png" alt="Venue Logo">
+                            </div>
+                            <p>JobAgency is the upcoming job site in the Inida with over 1000+ unique visitors every month. JobAgency strives to put job seekers first, giving them free access to search for jobs, post resumes, and research companies. Every day, we connect hundereds of people to new opportunities.</p>
+                            <ul class="social-icons">
+                                <li>
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="useful-links">
+                            <div class="footer-heading">
+                                <h4>Useful Links</h4>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul>
+                                        <li>@Html.ActionLink("Home", "Index", "Home", new { @class = "nav-link" })</li>
+                                        <li>@Html.ActionLink("About Us", "About", "Home", new { @class = "nav-link" })</li>
+                                        <li>@Html.ActionLink("Contact Us", "Contact", "Home", new { @class = "nav-link" })</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul>
+                                        <li>@Html.ActionLink("Sign in", "Signin", "Signin", new { @class = "nav-link" })</li>
+                                        <li>@Html.ActionLink("Sign up", "AddDetail", "Register", new { @class = "nav-link" })</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="contact-info">
+                            <div class="footer-heading">
+                                <h4>Contact Information</h4>
+                            </div>
+                            <p><i class="fa fa-map-marker"></i> Udumalpet,TamilNadu.</p>
+                            <ul>
+                                <li><span>Phone:</span><a href="#">+91 9080328583</a></li>
+                                <li><span>Email:</span><a href="#">jobfinderudt@gmail.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="sub-footer">
+            <p>Copyright © 2020 JobAgency - Designed by: <a href="">Kannan K</a></p>
+        </div>
+
+        <div>
+        </div>
+
+
+
+
+        <script src="~/js/vendor/bootstrap.js"></script>
+        <script src="~/js/vendor/bootstrap.min.js"></script>
+        <script src="~/js/vendor/jquery-1.11.2.min.js"></script>
+        <script src="~/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="~/js/vendor/npm.js"></script>
+        <script src="~/js/datepicker.js"></script>
+        <script src="~/js/main.js"></script>
+        <script src="~/js/plugins.js"></script>
+
+
+    }
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+        <script src="~/js/JavaScript.js"></script>
+        @if (ViewBag.Message != null)
+        {
+            <script type="text/javascript">
+                        window.onsubmit = function () {
+                            alert("@ViewBag.Message")
+                        }
+            </script>
+        }
+    }
+</body>
+</html>

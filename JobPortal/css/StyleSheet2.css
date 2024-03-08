@@ -1,0 +1,73 @@
+﻿.forms-controls {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    margin-top:36px;
+    border-width: 1px;
+    border-style: solid;
+    padding: 16px;
+    outline: 0;
+    font-family: inherit;
+    font-size: 18px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+    .forms-controls:hover {
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        margin-top: 36px;
+        border-width: 4px;
+        border-style: solid;
+        border-color: #a254fa;
+        padding: 16px;
+        outline: 0;
+        font-family: inherit;
+        font-size: 18px;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+        transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    }
+.img-signin {
+    position: absolute;
+    right: 900px;
+    width: 50%;
+}
+.img-signup {
+    position: absolute;
+    right: 900px;
+    top:300px;
+    width: 50%;
+}
+
+.img-contact {
+    position: absolute;
+    right: 900px;
+    top: 430px;
+    width: 50%;
+}
+
+.img-apply {
+    position: absolute;
+    right: 900px;
+    width: 50%;
+    top: 300px;
+    margin-top: 200px;
+}
+.logout {
+    display: inline-block;
+    position: absolute;
+    background-color: #a254fa;
+    color: #fff;
+    left:200px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-right: 95px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px 60px;
+    text-decoration: none;
+    border: 2px solid #a254fa;
+    transition: all 0.5s;
+}
+
